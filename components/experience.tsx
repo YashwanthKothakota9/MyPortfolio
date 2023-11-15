@@ -33,6 +33,7 @@ const Experience = () => {
                 fontSize: "1.5rem",
                 color: "#042f2e",
               }}
+              visible={true}
             >
               <h3 className="font-semibold capitalize">{experience.title}</h3>
               <p className="font-normal !mt-0">{experience.location}</p>
