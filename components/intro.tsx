@@ -8,10 +8,12 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTheme } from "@/context/theme-context";
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { theme } = useTheme();
 
   return (
     <section
@@ -36,7 +38,9 @@ const Intro = () => {
               height={192}
               quality={100}
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.3rem] border-white shadow-xl"
+              className={`${
+                theme === "light" ? "border-white" : "border-[#7dd3fc]"
+              } h-24 w-24 rounded-full object-cover border-[0.3rem]  shadow-xl transition-all`}
             />
           </motion.div>
         </div>
@@ -64,7 +68,7 @@ const Intro = () => {
       >
         <Link
           href="#contact"
-          className="group bg-teal-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-teal-950 active:scale-105 transition"
+          className="group bg-teal-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-teal-950 active:scale-105 transition dark:bg-sky-500 dark:hover:bg-sky-600"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -75,7 +79,7 @@ const Intro = () => {
         </Link>
 
         <a
-          className="bg-white group  px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-teal-950  active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white group  px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-[1.05] hover:scale-[1.05] hover:text-teal-950  active:scale-105 transition cursor-pointer border border-black/10 dark:bg-slate-50/10 dark:hover:text-sky-300"
           href="/Resume.pdf"
           download={true}
         >
@@ -84,7 +88,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="bg-white  p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-teal-950  active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white  p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-teal-950  active:scale-105 transition cursor-pointer border border-black/10 dark:bg-slate-50/10 dark:text-sky-400 dark:hover:text-sky-300"
           href="https://www.linkedin.com/in/yashwanthkothakota/"
           target="_blank"
         >
@@ -92,7 +96,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="bg-white  p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white  p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition cursor-pointer border border-black/10 dark:bg-slate-50/10 dark:text-sky-400 dark:hover:text-sky-300"
           href="https://github.com/YashwanthKothakota9"
           target="_blank"
         >
