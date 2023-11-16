@@ -1,6 +1,3 @@
-"use client";
-
-//@ts-expect-error
 import { experimental_useFormStatus as useFormStatus } from "react-dom";
 
 import { FaPaperPlane } from "react-icons/fa";

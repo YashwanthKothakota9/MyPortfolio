@@ -42,7 +42,7 @@ const Contact = () => {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg border border-black/10 dark:bg-sky-100 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg border border-black/10 dark:bg-sky-100 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none dark:text-black"
           type="email"
           name="senderEmail"
           required
@@ -50,7 +50,7 @@ const Contact = () => {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg border border-black/10 p-4 dark:bg-sky-100 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg border border-black/10 p-4 dark:bg-sky-100 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none dark:text-black"
           name="message"
           placeholder="Your message"
           required
