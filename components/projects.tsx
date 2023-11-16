@@ -1,11 +1,10 @@
 "use client";
 import { projectsData } from "@/lib/data";
 import SectionHeading from "./section-heading";
-import React, { useEffect } from "react";
+import React from "react";
 import Project from "./project";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from "@/lib/hooks";
+import Link from "next/link";
 
 const Projects = () => {
   const { ref } = useSectionInView("Projects", 0.5);
