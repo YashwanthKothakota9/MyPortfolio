@@ -30,7 +30,7 @@ export const getErrorMessage = (error: unknown): string => {
 export function constructMetadata({
   title = "Yashwanth Kothakota's Portfolio",
   description = "Yashwanth is a full stack developer looking for remote work.",
-  image = "/portfolio_dark.png",
+  image = "/public/portfolio_dark.png",
   icons = "/favicon.ico",
   noIndex = false,
 }: {
