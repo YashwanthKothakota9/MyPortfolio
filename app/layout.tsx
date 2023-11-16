@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
+import { constructMetadata } from "@/lib/utils";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -14,31 +15,7 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata = {
-  title: "Yashwanth | Personal Portfolio",
-  descrption: "Yashwanth is a full stack developer looking for remote work.",
-  openGraph: {
-    title: "Yashwanth Portfolio",
-    description: "I am a full stack developer looking for remote work.",
-    url: "https://yashwanth-portfolio.vercel.app/",
-    siteName: "Yashwanth | Personal Portfolio",
-    images: [
-      {
-        url: "/portfolio.png",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "/portfolio_dark.png",
-        width: 800,
-        height: 600,
-        alt: "My custom dark alt",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-};
+export const metadata = constructMetadata();
 
 export default function RootLayout({
   children,

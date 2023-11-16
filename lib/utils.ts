@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 export const validateString = (
   value: unknown,
   maxLength: number
@@ -24,3 +26,47 @@ export const getErrorMessage = (error: unknown): string => {
 
   return message;
 };
+
+export function constructMetadata({
+  title = "Yashwanth Kothakota's Portfolio",
+  description = "Yashwanth is a full stack developer looking for remote work.",
+  image = "/portfolio_dark.png",
+  icons = "/favicon.ico",
+  noIndex = false,
+}: {
+  title?: string;
+  description?: string;
+  image?: string;
+  icons?: string;
+  noIndex?: boolean;
+} = {}): Metadata {
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: image,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+      creator: "@Yashcsp22",
+    },
+    icons,
+    metadataBase: new URL("https://yashwanth-portfolio.vercel.app"),
+    themeColor: "#FFF",
+    ...(noIndex && {
+      robots: {
+        index: false,
+        follow: false,
+      },
+    }),
+  };
+}
