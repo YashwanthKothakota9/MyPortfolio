@@ -56,7 +56,11 @@ export function constructMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [image],
+      images: [
+        {
+          url: image,
+        },
+      ],
       creator: "@Yashcsp22",
     },
     icons,
