@@ -18,6 +18,7 @@ export const metadata = {
   openGraph: {
     title: "Yashwanth | Personal Portfolio",
     description: "Yashwanth is a full stack developer looking for remote work.",
+    url: "",
     siteName: "Yashwanth | Personal Portfolio",
     images: [
       {
