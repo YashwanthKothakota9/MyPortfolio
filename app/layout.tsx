@@ -15,10 +15,12 @@ const poppins = Poppins({
 });
 
 export const metadata = {
+  title: "Yashwanth | Personal Portfolio",
+  descrption: "Yashwanth is a full stack developer looking for remote work.",
   openGraph: {
-    title: "Yashwanth | Personal Portfolio",
-    description: "Yashwanth is a full stack developer looking for remote work.",
-    url: "",
+    title: "Yashwanth Portfolio",
+    description: "I am a full stack developer looking for remote work.",
+    url: "https://yashwanth-portfolio.vercel.app/",
     siteName: "Yashwanth | Personal Portfolio",
     images: [
       {
