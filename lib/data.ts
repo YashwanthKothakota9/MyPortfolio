@@ -122,7 +122,6 @@ export const skillsData = [
   "Zod",
   "MySQL",
   "tRPC",
-  "Apollo",
   "Express",
   "Python",
   "Pandas",
