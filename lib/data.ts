@@ -58,6 +58,14 @@ export const experiencesData = [
     icon: React.createElement(CgWorkAlt),
     date: "2023 Jan - 2023 June",
   },
+  {
+    title: "Self learning - Web Development",
+    location: "",
+    description:
+      "After my internship, I gained proficiency in various cutting-edge technologies such as Next.js, React.js, Tailwind CSS, Framer Motion, Prisma, Drizzle, as well as databases including MySQL, PostgreSQL, and Redis. This hands-on experience enabled me to develop multiple production-ready web applications characterized by their mobile responsiveness. Furthermore, I successfully deployed these applications on platforms such as Vercel and AWS.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023 June - 2023 Nov",
+  },
 ] as const;
 
 export const projectsData = [
