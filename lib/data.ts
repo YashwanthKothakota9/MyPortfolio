@@ -87,23 +87,6 @@ export const projectsData = [
     deploy: "https://stack-overflow-clone-alpha-pink.vercel.app/",
   },
   {
-    title: "Coursely Learning Management System",
-    description:
-      "A private web app for managing courses, students, teachers and classes. It is a clone of Teachable.",
-    tags: [
-      "React",
-      "Next.js",
-      "MySQL",
-      "Tailwind",
-      "Prisma",
-      "UploadThing",
-      "PlanetScale",
-      "ShadcnUI",
-    ],
-    imageUrl: CourselyLmsImg,
-    deploy: "https://learning-mangement-system.vercel.app/",
-  },
-  {
     title: "Trello Clone",
     description:
       "A public web app for managing tasks. It is a clone of Trello.",
@@ -122,18 +105,15 @@ export const skillsData = [
   "React",
   "Next.js",
   "Node.js",
+  "Express"
   "Git",
   "GitHub",
-  "Drizzle",
   "Prisma",
   "MongoDB",
   "MySQL",
-  "GraphQL",
   "tRPC",
-  "Express",
   "Python",
   "Pandas",
-  "AWS",
   "Docker",
   "Zod",
   "Zustand",
