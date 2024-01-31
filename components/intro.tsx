@@ -1,17 +1,17 @@
-"use client";
-import Image from "next/image";
-import ProfileImg from "@/public/Yash.jpg";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
-import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useTheme } from "@/context/theme-context";
+'use client';
+import Image from 'next/image';
+import ProfileImg from '@/public/Yash.jpg';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
+import { HiDownload } from 'react-icons/hi';
+import { FaGithubSquare } from 'react-icons/fa';
+import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
+import { useTheme } from '@/context/theme-context';
 
 const Intro = () => {
-  const { ref } = useSectionInView("Home", 0.5);
+  const { ref } = useSectionInView('Home', 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { theme } = useTheme();
 
@@ -27,7 +27,7 @@ const Intro = () => {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "tween",
+              type: 'tween',
               duration: 0.2,
             }}
           >
@@ -39,7 +39,7 @@ const Intro = () => {
               quality={100}
               priority={true}
               className={`${
-                theme === "light" ? "border-white" : "border-[#7dd3fc]"
+                theme === 'light' ? 'border-white' : 'border-[#7dd3fc]'
               } h-24 w-24 rounded-full object-cover border-[0.3rem]  shadow-xl transition-all`}
             />
           </motion.div>
@@ -51,11 +51,10 @@ const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Yashwanth.</span> I&apos;m a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
+        <span className="font-bold">Hello, I&apos;m Yashwanth.</span> I&apos;m a{' '}
+        <span className="font-bold">software developer</span> with{' '}
         <span className="font-bold">6 months</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        building <span className="italic">software</span>.
       </motion.h1>
 
       <motion.div
@@ -70,11 +69,11 @@ const Intro = () => {
           href="#contact"
           className="group bg-teal-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-teal-950 active:scale-105 transition dark:bg-sky-500 dark:hover:bg-sky-600"
           onClick={() => {
-            setActiveSection("Contact");
+            setActiveSection('Contact');
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          Contact me here{' '}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -83,7 +82,7 @@ const Intro = () => {
           href="/Resume.pdf"
           download={true}
         >
-          Download CV{" "}
+          Download CV{' '}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 

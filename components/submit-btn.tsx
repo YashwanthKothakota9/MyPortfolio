@@ -1,6 +1,7 @@
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
+//@ts-ignore
+import { useFormStatus } from 'react-dom';
 
-import { FaPaperPlane } from "react-icons/fa";
+import { FaPaperPlane } from 'react-icons/fa';
 
 const SubmitBtn = () => {
   const { pending } = useFormStatus();
@@ -15,7 +16,7 @@ const SubmitBtn = () => {
         <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
       ) : (
         <>
-          Submit{" "}
+          Submit{' '}
           <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 " />
         </>
       )}
